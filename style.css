@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+/* Zerando CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transform: rotateX(20deg);
+}
+
+
+/* Fundo-tela */
+
+html {
+    width: 100vw;
+    height: 100vh;
+    font-size: 62.5%;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(20, 20, 20, 1)), url(/img/istock-524555930.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+}
+
+/* Menu - Header - NavBar */
+
+header {
+        
+    width: 100%;
+    height: 7vh;
+    background-color: rgba(243, 241, 241, 0.2);
+}
+
+.menu-content {
+    text-transform: uppercase;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    letter-spacing: 0.4rem;
+    cursor: pointer;
+}
+
+.menu-content .list-itens {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    box-shadow: 1px 1px ;
+}
+
+.menu-content .list-itens a {
+    text-decoration: none;
+    color: #fff;
+    padding: 1.5rem;
+    transform: 2ms ease-in;
+    position: relative;
+}
+
+
+.menu-content .list-itens a:before {
+    content: ' ';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    height: 1px;
+    background-color: rgb(0, 0, 0);
+    transition: all 1.5s ease; 
+}
+
+.menu-content .list-itens a:hover:before {
+    width: 100%;
+}
+
+/* Centro - Conteudo Principal */
+
+main {
+    height: 93vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Textos conteudo principal */
+
+.primary-text {
+    width: 850px;
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    box-shadow: 10px 1px grey;
+    border-radius: 19px;
+}
+
+.second-text {
+    margin-bottom: 7rem;
+    font-size: 2rem;
+    color: rgb(165, 165, 165);
+    text-transform: uppercase;
+}
+
+/* Botões */
+
+
+.btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btns button {
+    width: 250px;
+    height: 60px;
+    cursor: pointer;
+    border: 1px solid white;
+    color: white;
+    text-transform: uppercase;
+    background-color: transparent;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    border-radius: 20px;
+    position: relative;
+    transition: 2s;
+}
+
+.btns button:hover {
+    color: rgb(0, 0, 0);
+    border: none;
+}
+
+.btns button:before {
+    content: ' ';
+    border-radius: 20px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 0;
+    height: 60px;
+    background-color: #f5f5f5;
+    z-index: -1;
+    transition: 1s;
+}
+
+.btns button:hover:before {
+    width: 100%;
+}
+
+
+
+        /* Benefits section */
+      
+        
+     #key-benefits {    
+        background-image: none; /* Define a imagem de fundo como nenhuma */
+        background: #a6a7bd;
+        background: linear-gradient(49deg, rgba(165, 165, 165,1) 60%, rgba(245, 245, 245,1) 100%);
+        
+     }
+    
+        #key-benefits h2 {
+        background-color: var(--secondary);
+        text-align: center;
+        padding: 2em;
+        font-size: 45px;
+        color: black;
+        font-family: sans-serif;
+        box-shadow:  5px 18px 27px #000000;
+        
+    }
+    #key-benefits p {
+        font-size: 18px;
+        color: black;
+        box-shadow:  5px 18px 27px #000000;
+        border-radius: 22px;
+        font-weight: bold;
+        
+    }
+    
+    .benefits {
+        display: flex;
+        justify-content: space-around;
+        padding: 4em;
+        width: 80%;
+        margin: 0 auto;
+        
+    }
+    
+    .benefit {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 20%;
+        color: var(--text-tertiary);
+    }
+    
+    .benefit .benefit-img {
+        width: 270px;
+        height: 270px;
+        border-radius: 50%;
+        background-size: cover;
+        background-position: center;
+        margin-bottom: 5em;
+        box-shadow:  5px 10px 27px #000000;
+    }
+    
+    #benefit-1 {
+        background-image: url("/img/images.png");
+    }
+    
+    #benefit-2 {
+        background-image: url("/img/nutrição.jpg");
+    }
+    
+    #benefit-3 {
+        background-image: url("/img/acompanhamento.jpg");
+    }
+
+    
+
+
+
+
+   
+  /* Media query for responsive design */
+    @media screen and (max-width: 768px) {
+    .list-itens {
+        flex-direction: column;
+        align-items: center; /* Center-align items horizontally */
+    }
+
+    .list-itens li {
+        margin:  0;
+        text-align: center;
+    }
+
+    .list-itens a {
+        font-size: 18px;
+        padding: 12px; 
+        width: 80%; 
+        margin: 10px;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        align-items: flex-end;
+        
+    }
+    
+    .list-itens li:nth-child(1),
+    .list-itens li:nth-child(2),
+    .list-itens li:nth-child(3),
+    .list-itens li:nth-child(4),
+    .list-itens li:nth-child(5) {
+        display: none;
+    }
+}
+
+.my-container{
+    display: flex;
+    width: 80%;
+    height: 100px;
+    margin: 60px auto;
+    background-color: #41414efb;
+    border-radius: 18px;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: baseline;
+    box-shadow: 12px 14px grey;
+    
+}
+
+.my-container h1 {
+    font-size: 35px;
+    color: #f6f6f6;
+    margin-right: 2px;
+    border-color: black;
+    box-shadow: 13px 5px rgb(37, 37, 37);
+    border-radius: 19px;
+    
+}
+
+.my-item{
+    height: 170px;
+    width: 150px;
+    background-color:  #e3e5eb;
+    border-radius: 8px;
+    padding: 18px;
+    border: 4px solid;
+    border-color: rgb(46, 45, 45);
+    box-shadow: 8px 7px rgb(119, 117, 117);
+    
+    
+}
+
+.my-item h1{
+   font-size: 24px;
+   color: black;
+   box-shadow: none;
+   font-family: Condensed;
+   
+}
+
+ul{
+    list-style: none;
+    font-size: 20px;
+}
+
+    @media screen and (max-width: 768px) {
+    .main-content {
+        padding: 18px;
+    }
+
+    .primary-text {
+        font-size: 18px;
+        margin: auto;
+        align-items: center;
+    }
+
+    .second-text {
+        font-size: 12px;
+    }
+
+    .btns {
+        flex-direction: column;
+    }
+
+    .btn-exp,
+    .btn-personal {
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    .benefits {
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        padding: 2em;
+      }
+      .benefit {
+        max-width: 100%;
+        margin-bottom: 2em;
+      }
+}
+
